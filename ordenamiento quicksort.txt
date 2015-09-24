@@ -1,0 +1,9 @@
+#Ordenamiento quicksort
+def quicksort(x):
+# elegimos el pivote
+#Juan Chichil Hernandz 
+    if len(x) > 2: v = x[0] + x[len(x)-1] + x[len(x)-1/2] / 3
+    elif len(x) == 2: v = x[0] + x[1] / 2
+    else: v = x[0]
+
+    return quicksort(filter((lambda y: y<v ), x)) + [v] + quicksort(filter((lambda y: y>=v), x))
